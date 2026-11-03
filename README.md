@@ -39,6 +39,10 @@ run_tests.bat     :: 测试包：环境诊断 + 全量测试（可选真机实�
 - 搅拌：ZK-TD2 延时继电器（P13 模式）触发调速器驱动马达，由 P2.0 控制（杜邦线连接即可）。搅拌转速由调速器一次性设定；PSoC 侧仅输出开关信号——如需软件调速，需固件增加 PWM 输出并外加一级驱动管，本方案为复用现成模块未采用。
 - 详细接线见 `PSoC-Potentiostat-YI-1.0_upgrade_guide.md` 接线总表一节。
 
+### 测试说明
+
+本项目的修改设想几年前就已成形，却一直搁置至今——直到我离开实验室、告别电化学检测后才最终完成。因此部分测试较为粗糙：未能正式配制缓冲液体系，仅用手头现成的几种试剂做了验证。但实测结果足以证明：整套系统可以正常完成检测。
+
 ---
 
 ## Differences from upstream (English)
@@ -47,6 +51,10 @@ run_tests.bat     :: 测试包：环境诊断 + 全量测试（可选真机实�
 2. **New features**: standalone DPV page (with a custom firmware `'P'` command patch — upstream firmware has no true DPV); multi-cycle CV (firmware `'S|…|N'` LUT patch, 1–9 seamless cycles with automatic software fallback beyond LUT capacity); stirring control (firmware `'O'` command + automated ASV timing); pre-scan quiet time; SG smoothing / region-selected baseline subtraction / automatic peak detection / calibration-curve quantitation (external standard & standard addition); per-scan autosave and metadata-headed CSVs that reload into the correct page.
 3. **Quality assurance**: 80 software test classes with a firmware-emulating fake serial device, plus 9 auto-judged on-hardware tests, summarized into a single report file (`test_report.txt`).
 4. **Real-hardware fixes**: documented in `PSoC-Potentiostat-YI-1.0_upgrade_guide.md`, including a full root-cause analysis of the firmware Sleep/Wakeup pairing issue.
+
+### A note on testing
+
+The revision plan for this project took shape years ago, but was postponed again and again — it was only finished after I had left the lab and moved on from electrochemical detection. As a result, some tests are relatively rough: no properly prepared buffer systems, only verification with the reagents I had on hand. Even so, the measured results are enough to show that the complete system works normally for detection.
 
 ### License
 
