@@ -1,6 +1,8 @@
 # PSoC-Potentiostat — YI-1.0 固件分支 / YI-1.0 Firmware Branch
 
 > **本分支 `YI-1.0-firmware`**：在原作者工程基础上合并四项固件增强——搅拌控制 `'O'`、真 DPV `'P'`、CV 多圈 `'S|…|N'`（1–9 圈零间隙连续循环）、`'X'` 复位不休眠。工程目录 `Amperometry_v059_2_Stir.cydsn`；命令与补丁机理见 GUI 仓库 [`firmware_patch/firmware_guide.md`](https://github.com/LLLIO400/PSoC-Potentiostat/blob/YI-1.0/firmware_patch/firmware_guide.md)；手把手刷机步骤见 [`刷固件图文说明/`](刷固件图文说明/)。
+
+**免编译直接刷 / Flash without compiling**：[`hex_release/Amperometry_v059_2_Stir.hex`](hex_release/Amperometry_v059_2_Stir.hex)（2026-10-13 编译、真机验证版，含全部四项增强）——用 PSoC Programmer 经 J10 烧录即可，无需安装 PSoC Creator。步骤截图见 [`刷固件图文说明/`](刷固件图文说明/)（其编译部分可跳过）。
 > **配套上位机 / Companion GUI**：[`YI-1.0` 分支](https://github.com/LLLIO400/PSoC-Potentiostat/tree/YI-1.0)（中英双语电化学工作站：CV / LSV / SWV / DPV / ASV / 计时电流）｜ [Release v1.0 下载](https://github.com/LLLIO400/PSoC-Potentiostat/releases/tag/v1.0)
 
 ---

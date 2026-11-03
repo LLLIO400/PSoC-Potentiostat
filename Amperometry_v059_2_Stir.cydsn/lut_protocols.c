@@ -74,20 +74,17 @@ uint16_t LUT_MakeTriangle_Wave(uint16_t start_value, uint16_t end_value,
 
     //LCD_Position(1,0);
     //LCD_PrintDecUint16(end_value);
-    printf("p: %i
-", _lut_index);
+    printf("p: %i\n", _lut_index);
 
     // 每圈一段 start→end→start；段间用 fix 去掉重复端点，
     // 最后一圈不 fix（保留回到 start 的采样点），最后保持 1 拍
     // （DAC 在判断结束前会多走一拍，与原单圈行为逐点一致）
     for (cycle = 0; cycle < cycles; cycle++) {
         _lut_index = LUT_make_line(start_value, end_value, _lut_index);
-        printf("z: %i
-", _lut_index);
+        printf("z: %i\n", _lut_index);
         _lut_index = LUT_fix_lut_index(_lut_index, 1);
         _lut_index = LUT_make_line(end_value, start_value, _lut_index);
-        printf("v: %i
-", _lut_index);
+        printf("v: %i\n", _lut_index);
         if ((cycle + 1 < cycles) && (_lut_index < MAX_LUT_SIZE)) {
             _lut_index = LUT_fix_lut_index(_lut_index, 1);
         }
@@ -99,8 +96,7 @@ uint16_t LUT_MakeTriangle_Wave(uint16_t start_value, uint16_t end_value,
     _lut_index++;
     //LCD_PutChar('|');
     //LCD_PrintDecUint16(_lut_index);
-    printf("%i
-", _lut_index);
+    printf("%i\n", _lut_index);
     //LCD_PutChar('|');
     return _lut_index;
 }
@@ -159,8 +155,7 @@ uint16_t LUT_MakeCVStartZero(uint16_t start_value, uint16_t end_value,
     }
     //LCD_Position(1,0);
     //LCD_PrintDecUint16(end_value);
-    printf("dac ground value: %i
-", dac_ground_value);
+    printf("dac ground value: %i\n", dac_ground_value);
     // 先从 0 V 走到起始电位（仅一次），中间 N−1 个完整往返
     // （start→end→start，段间 fix 去重），最后 start→end 后从 end
     // 回到 0 V 并保持 1 拍——单圈时与原实现逐点一致
