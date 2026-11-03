@@ -1,0 +1,502 @@
+/*******************************************************************************
+* File Name: lut_protocols.c
+*
+* Description:
+*  This file contains the protocols to create look up tables
+*
+**********************************************************************************
+ * Copyright Kyle Vitautas Lopin, Naresuan University, Phitsanulok Thailand
+ * Released under Creative Commons Attribution-ShareAlike  3.0 (CC BY-SA 3.0 US)
+*********************************************************************************/
+
+#include "lut_protocols.h"
+#include "globals.h"
+//extern char LCD_str[];  // for debug
+
+static uint16_t LUT_fix_lut_index(uint16_t lut_index, uint16_t fix_pt);
+
+
+//uint16_t LUT_make_from_params(const struct RunParams _run_params) {
+//    uint16_t (*line_maker)(struct RunParams, uint16_t);
+//    if (_run_params.use_swv == true) {
+//        line_maker = &LUT_make_line;
+//    }
+//    else {
+//        line_maker = &LUT_make_dpv;
+//    }
+//    
+//    uint16_t lut_length;
+//    if (run_params.sweep_type == 'L') {
+//        lut_length = line_maker(_run_params, lut_length);
+//        waveform_lut[lut_length] = waveform_lut[lut_length-1];
+//        lut_length += 1;
+//    }  // else this is a cyclic voltammerty experiment
+//    // TODO: check if the sweep time is C and call an error if so?
+//    else if (run_params.start_volt_type == 'Z') {  // Make a Cyclic voltammetry look up table that starts at 0 volts
+//        lut_length = LUT_MakeCVStartZero(_run_params);
+//    }
+//    else if (run_params.start_volt_type == 'S') {  // Make a Cyclic voltammetry look up table that starts at the first dac value
+//        lut_length = LUT_MakeTriangle_Wave(_run_params);
+//    } 
+//    
+//    
+//    return lut_length;
+//}
+
+/******************************************************************************
+* Function Name: LUT_MakeTriangleWave
+*******************************************************************************
+*
+* Summary:
+*  Fill in the look up table (waveform_lut) for the DACs to perform a cyclic voltammetry experiment.
+*  Start the CV protocol at the user defined start value
+*
+* Parameters:
+*  uint16_t start_value: first value to put in the dac
+*  uint16_t end_value: to peak dac value
+*
+* Return:
+*  uint16_t: how long the look up table is
+*
+* Global variables:
+*  waveform_lut: Array the look up table is stored in
+*
+*******************************************************************************/
+
+uint16_t LUT_MakeTriangle_Wave(uint16_t start_value, uint16_t end_value,
+                               uint16_t cycles) {
+    uint16_t _lut_index = 0;  // start at the beginning of the lut
+    uint16_t cycle;
+
+    if (cycles < 1) {
+        cycles = 1;
+    }
+
+    //LCD_Position(1,0);
+    //LCD_PrintDecUint16(end_value);
+    printf("p: %i\n", _lut_index);
+
+    // 每圈一段 start→end→start；段间用 fix 去掉重复端点，
+    // 最后一圈不 fix（保留回到 start 的采样点），最后保持 1 拍
+    // （DAC 在判断结束前会多走一拍，与原单圈行为逐点一致）
+    for (cycle = 0; cycle < cycles; cycle++) {
+        _lut_index = LUT_make_line(start_value, end_value, _lut_index);
+        printf("z: %i\n", _lut_index);
+        _lut_index = LUT_fix_lut_index(_lut_index, 1);
+        _lut_index = LUT_make_line(end_value, start_value, _lut_index);
+        printf("v: %i\n", _lut_index);
+        if ((cycle + 1 < cycles) && (_lut_index < MAX_LUT_SIZE)) {
+            _lut_index = LUT_fix_lut_index(_lut_index, 1);
+        }
+        if (_lut_index >= MAX_LUT_SIZE) {
+            break;  // LUT 满：按已有圈数收尾，靠 hold 点正常结束
+        }
+    }
+    waveform_lut[_lut_index] = start_value;  // the DAC is changed before the value is checked in the isr so it will go 1 over so make it stay at last voltage
+    _lut_index++;
+    //LCD_PutChar('|');
+    //LCD_PrintDecUint16(_lut_index);
+    printf("%i\n", _lut_index);
+    //LCD_PutChar('|');
+    return _lut_index;
+}
+
+
+uint16_t LUT_MakeTriangle_Wave_SWV(uint16_t start_value, uint16_t end_value,
+                                   uint16_t swv_height, uint16_t swv_inc) {
+    uint16_t _lut_index = 0;  // start at the beginning of the lut
+    
+    //LCD_Position(1,0);
+    //LCD_PrintDecUint16(end_value);
+    printf("p: %i\n", _lut_index);
+
+    _lut_index = LUT_make_swv_line(start_value, end_value, swv_inc, swv_height, 0);
+    printf("z: %i\n", _lut_index);
+    _lut_index = LUT_fix_lut_index(_lut_index, 2);
+    _lut_index = LUT_make_swv_line(end_value, start_value, swv_inc, swv_height, _lut_index);
+    printf("v: %i\n", _lut_index);
+    waveform_lut[_lut_index] = start_value;  // the DAC is changed before the value is checked in the isr so it will go 1 over so make it stay at last voltage
+    _lut_index++;
+    //LCD_PutChar('|');
+    //LCD_PrintDecUint16(_lut_index);
+    printf("%i\n", _lut_index);
+    //LCD_PutChar('|');
+    return _lut_index;  
+}
+
+
+/******************************************************************************
+* Function Name: LUT_MakeCVStartZero
+*******************************************************************************
+*
+* Summary:
+*  Fill in the look up table (waveform_lut) for the DACs to perform a cyclic voltammetry experiment.
+*  Start the CV protocol at 0 volts
+*
+* Parameters:
+*  uint16_t start_value: first value the dac goes after it starts at 0 V
+*  uint16_t end_value: the dac value to go to after going to start_value, dac then goes to 0 V (e.g. virtual ground)
+*
+* Return:
+*  uint16_t: how long the look up table is
+*
+* Global variables:
+*  waveform_lut: Array the look up table is stored in
+*
+*******************************************************************************/
+
+uint16_t LUT_MakeCVStartZero(uint16_t start_value, uint16_t end_value,
+                             uint16_t cycles){
+    uint16_t _lut_index = 0;  // start at the beginning of the lut
+    uint16_t cycle;
+
+    if (cycles < 1) {
+        cycles = 1;
+    }
+    //LCD_Position(1,0);
+    //LCD_PrintDecUint16(end_value);
+    printf("dac ground value: %i\n", dac_ground_value);
+    // 先从 0 V 走到起始电位（仅一次），中间 N−1 个完整往返
+    // （start→end→start，段间 fix 去重），最后 start→end 后从 end
+    // 回到 0 V 并保持 1 拍——单圈时与原实现逐点一致
+    _lut_index = LUT_make_line(dac_ground_value, start_value, 0);
+    _lut_index = LUT_fix_lut_index(_lut_index, 1);
+    for (cycle = 0; cycle + 1 < cycles; cycle++) {
+        _lut_index = LUT_make_line(start_value, end_value, _lut_index);
+        _lut_index = LUT_fix_lut_index(_lut_index, 1);
+        _lut_index = LUT_make_line(end_value, start_value, _lut_index);
+        _lut_index = LUT_fix_lut_index(_lut_index, 1);
+        if (_lut_index >= MAX_LUT_SIZE) {
+            waveform_lut[_lut_index] = dac_ground_value;
+            return _lut_index + 1;  // LUT 满：直接在当前位置归零收尾
+        }
+    }
+    _lut_index = LUT_make_line(start_value, end_value, _lut_index);
+    _lut_index = LUT_fix_lut_index(_lut_index, 1);  // 去掉重复的 end
+    _lut_index = LUT_make_line(end_value, dac_ground_value, _lut_index);
+    waveform_lut[_lut_index] = dac_ground_value;  // the DAC is changed before the value is checked in the isr so it will go 1 over so make it stay at virtual ground
+    _lut_index++;
+    //LCD_PutChar('|');
+    //LCD_PrintDecUint16(_lut_index);
+    //LCD_PutChar('|');
+    return _lut_index;
+}
+
+
+static uint16_t LUT_fix_lut_index(uint16_t lut_index, uint16_t fix_pt) {
+    // incase an error occured and the first function didn't do anything
+    // go back one, you need just 1 point at the peak, not 2
+    // the next call will add the peak voltage again
+    if (lut_index >= fix_pt) {
+        return lut_index - fix_pt;
+    }
+    return lut_index;  // If not enough space on look up table, just return un-modified
+}
+
+
+uint16_t LUT_MakeCVStartZero_SWV(uint16_t start_value, uint16_t end_value,
+                                 uint16_t swv_height, uint16_t swv_inc){
+    uint16_t _lut_index = 0;  // start at the beginning of the lut
+    
+    //LCD_Position(1,0);
+    //LCD_PrintDecUint16(end_value);
+    printf("dac ground value: %i\n", dac_ground_value);
+    _lut_index = LUT_make_swv_line(dac_ground_value, start_value, swv_inc, swv_height, 0);
+    //TODO: put in function and put in the other waveform making functions
+    _lut_index = LUT_fix_lut_index(_lut_index, 2);
+    _lut_index = LUT_make_swv_line(start_value, end_value, swv_inc, swv_height, _lut_index);
+    _lut_index = LUT_fix_lut_index(_lut_index, 2);
+    _lut_index = LUT_make_swv_line(end_value, dac_ground_value, swv_inc, swv_height, _lut_index);
+    waveform_lut[_lut_index] = dac_ground_value;  // the DAC is changed before the value is checked in the isr so it will go 1 over so make it stay at virtual ground
+    _lut_index++;
+    //LCD_PutChar('|');
+    //LCD_PrintDecUint16(_lut_index);
+    //LCD_PutChar('|');
+    return _lut_index;  
+}
+
+/******************************************************************************
+* Function Name: LUT_make_side
+*******************************************************************************
+*
+* Summary:
+*  Make a ramp from start to end in waveform_lut starting at index
+*  Does not matter if start or end is higher
+*
+* Parameters:
+*  uint16_t start: first value to put in the look up table
+*  uint16_t end: end value to put in the look up table
+*  uint16_t index: the place to start putting in numbers in the look up table
+*
+* Return:
+*  uint16_t: first place after the filled in area of the look up table
+*
+* Global variables:
+*  waveform_lut: Array the look up table is stored in
+*
+*******************************************************************************/
+
+uint16_t LUT_make_line(uint16_t start, uint16_t end, uint16_t index) {
+    printf("start: %i, end: %i\n", start, end);
+    if (start < end) {
+        for (int16_t value = start; value <= end; value++) {
+            waveform_lut[index] = value;
+            index ++;
+            //printf("l: %i, %i\n", index, value);
+            if (index >= MAX_LUT_SIZE) {
+                return index;
+            }
+        }
+    }
+    else {
+        for (int16_t value = start; value >= end; value--) {
+            waveform_lut[index] = value;
+            index ++;
+            //printf("b: %i, %i\n", index, value);
+            if (index >= MAX_LUT_SIZE) {
+                return index;
+            }
+        }
+    }
+    //printf("m: %i\n", index);
+    return index;
+}
+
+/******************************************************************************
+* Function Name: LUT_make_swv_side
+*******************************************************************************
+*
+* Summary:
+*  Make a ramp with a square wave super imposed, from start to end in waveform_lut
+*  starting at index
+*  Does not matter if start or end is higher
+*
+* Parameters:
+*  uint16_t start: first value to put in the look up table
+*  uint16_t end: end value to put in the look up table
+*  uint16_t pulse_inc: increment between the square pulse steps
+*  uint16_t pulse_height: height of each square wave pulse
+*  uint16_t index: the place to start putting in numbers in the look up table
+*
+* Return:
+*  uint16: first place after the filled in area of the look up table
+*
+* Global variables:
+*  waveform_lut: Array the look up table is stored in
+*
+*******************************************************************************/
+
+uint16_t LUT_make_swv_line(uint16_t start, uint16_t end, uint16_t pulse_inc,
+                           uint16_t pulse_height, uint16_t index) {
+    printf("making swv linefrom: %i to %i \n", start, end);
+    printf("inc: %i height: %i \n", pulse_inc, pulse_height);
+    if (index > MAX_LUT_SIZE) {
+        return index;
+    }
+    // uint16_t half_pulse = pulse_height / 2;
+    if (start < end) {
+        for (int16_t value = start; value <= end; value+=pulse_inc) {
+            waveform_lut[index] = value + pulse_height;
+            index ++;
+            waveform_lut[index] = value - pulse_height;
+            index ++;
+            printf("a: %i, %i\n", index, value);
+            if (index > MAX_LUT_SIZE) {
+               return index;
+            }
+        }
+    }
+    else {
+        for (int16_t value = start; value >= end; value-=pulse_inc) {
+            waveform_lut[index] = value + pulse_height;
+            index ++;
+            waveform_lut[index] = value - pulse_height;
+            index ++;
+            printf("b: %i, %i\n", index, value);
+            if (index > MAX_LUT_SIZE) {
+                return index;
+            }
+        }
+    }
+    //printf("m: %i\n", index);
+    return index;
+}
+
+/******************************************************************************
+* Function Name: LUT_make_dpv
+*******************************************************************************
+*
+* Summary:
+*  Make a Differential Pulse Voltammetry (DPV) look up table profile
+*
+* Parameters:
+*  uint16_t start: starting dac value
+*  uint16_t end: value the dac will end with, not including the pulse dac settings
+*  uint16_t index: the place to start putting in numbers in the look up table
+*  uint16_t height: height of the DPV pulse
+*  uint16_t increment: increment of each step
+*
+* Return:
+*  uint16_t: first place after the filled in area of the look up table
+*
+* Global variables:
+*  waveform_lut: Array the look up table is stored in
+*
+*  NOTES: NOT FINISHED JUST TO RUN UPWARDS DPV AFTER ASV
+*
+*******************************************************************************/
+
+/******************************************************************************
+* Function Name: LUT_make_dpv_line
+*******************************************************************************
+*
+* Summary:
+*  Make a true Differential Pulse Voltammetry (DPV) look up table (linear sweep).
+*  Each step writes 2 entries: [pulse level, base level], using the same DAC
+*  polarity convention as LUT_make_swv_line. The host PC differences each pair
+*  (first - second) to get i_pulse - i_base. Duty cycle is 50% (one timer tick
+*  per level), same architecture as SWV.
+*
+* Parameters:
+*  uint16_t start: starting dac value
+*  uint16_t end: ending dac value
+*  uint16_t pulse_inc: dac counts of the staircase increment per step
+*  uint16_t pulse_height: dac counts of the pulse height
+*  uint16_t index: position in the lut to start filling
+*
+* Return:
+*  uint16_t: first place after the filled area of the look up table
+*
+*******************************************************************************/
+
+uint16_t LUT_make_dpv_line(uint16_t start, uint16_t end, uint16_t pulse_inc,
+                           uint16_t pulse_height, uint16_t index) {
+    if (index > MAX_LUT_SIZE) {
+        return index;
+    }
+    if (start < end) {
+        for (int16_t value = start; value <= end; value += pulse_inc) {
+            waveform_lut[index] = value + pulse_height;  // pulse level (sampled 1st)
+            index++;
+            waveform_lut[index] = value;                 // base level (sampled 2nd)
+            index++;
+            if (index > MAX_LUT_SIZE) {
+                return index;
+            }
+        }
+    }
+    else {
+        for (int16_t value = start; value >= end; value -= pulse_inc) {
+            waveform_lut[index] = value + pulse_height;
+            index++;
+            waveform_lut[index] = value;
+            index++;
+            if (index > MAX_LUT_SIZE) {
+                return index;
+            }
+        }
+    }
+    return index;
+}
+
+
+// DONT USE, use LUT_make_swv_line
+uint16_t LUT_make_dpv_depr(uint16_t start, uint16_t end, uint16_t height,
+                           uint16_t increment, uint16_t index) {
+    
+    uint16_t level = start;  // variable to store currend dac values in
+    waveform_lut[index] = level;
+    while (level >= end) {  // >= because the voltages are inverted compared to the dac
+        index += 1;
+        waveform_lut[index] = level - height - increment;  // negative bec
+        index += 1;
+        waveform_lut[index] = level - increment;
+        level = waveform_lut[index];
+    }
+//    LCD_ClearDisplay();
+//    
+//    sprintf(LCD_str, "%d|%d|%d", waveform_lut[0], waveform_lut[1], waveform_lut[2]);
+//    LCD_PrintString(LCD_str);
+//    LCD_Position(1, 0);
+    
+//    sprintf(LCD_str, "%d|%d|%d", waveform_lut[3], waveform_lut[4], waveform_lut[5]);
+//    LCD_PrintString(LCD_str);
+    
+    return index;
+}
+
+
+/******************************************************************************
+* Function Name: LUT_MakePulse
+*******************************************************************************
+*
+* Summary:
+*  Make a look up table that stores a square pulse sequence
+*  Quick hack for chronoamperomerty
+*  TODO: THIS SHOULD BE REPLACED
+*
+* Parameters:
+*  uint16_t base: value to be placed in the DAC to maintain the baseline potential
+*  uint16_t pulse: value to put in the DAC for the voltage pulse
+*
+* Global variables:
+*  waveform_lut: Array the look up table is stored in
+*
+*******************************************************************************/
+
+void LUT_MakePulse(uint16_t base, uint16_t pulse) {
+    int _lut_index = 0;
+    while (_lut_index < 1000) {
+        waveform_lut[_lut_index] = base;
+        _lut_index++;
+    }
+    while (_lut_index < 2000) {
+        waveform_lut[_lut_index] = pulse;
+        _lut_index++;
+    }
+    while (_lut_index < 4000) {
+        waveform_lut[_lut_index] = base;
+        _lut_index++;
+    }
+}
+
+
+struct RunParams LUT_make_run_params(const uint8_t data_buffer[], struct RunParams *run_params) {
+    // The start, and end values are always in the same place
+    run_params->start_value = LUT_Convert2Dec(&data_buffer[2], 4);
+    //printf("%i", run_params->start_value);
+    run_params->end_value = LUT_Convert2Dec(&data_buffer[7], 4);
+    // To determine where the other values are have to check if we are using a
+    // square wave voltammetry profile as seen in the first letter
+    if (data_buffer[0] == 'G') {
+        run_params->use_swv = true;
+    }
+    else {  // default to no swv
+        run_params->use_swv = false;
+    }  // TODO: how to raise an error if bad input?
+    if (run_params->use_swv == true) {
+        run_params->use_swv = true;
+        run_params->swv_inc = LUT_Convert2Dec(&data_buffer[12], 3);
+        run_params->swv_pulse_height = LUT_Convert2Dec(&data_buffer[16], 3);
+        run_params->timer_period = LUT_Convert2Dec(&data_buffer[21], 5);
+        run_params->sweep_type = data_buffer[26];
+        run_params->start_volt_type = data_buffer[27];
+    }
+    else {
+        run_params->timer_period = LUT_Convert2Dec(&data_buffer[12], 5);
+        run_params->sweep_type = data_buffer[18];
+        run_params->start_volt_type = data_buffer[19];
+    }
+    return *run_params;
+}
+
+
+uint16_t LUT_Convert2Dec(const uint8_t array[], const uint8_t len){
+    uint16_t num = 0;
+    for (int i = 0; i < len; i++){
+        num = num * 10 + (array[i] - '0');
+    }
+    return num;
+}
+
+/* [] END OF FILE */

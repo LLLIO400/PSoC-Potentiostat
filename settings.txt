@@ -1,0 +1,16 @@
+start_dac_value = 1648
+start_voltage = -800
+end_voltage = 600
+sweep_start_type = Start
+end_dac_value = 2648
+sweep_type = LS
+sweep_rate = 0.2
+delay_time = 56000.0
+pwm_period_value = 3840
+swv_height = 100
+swv_inc = 5
+swv_period = 100
+use_swv = True
+cycles = 1
+simulate_mode = False
+theme = cosmo

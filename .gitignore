@@ -1,0 +1,11 @@
+# Python 运行时产物
+__pycache__/
+*.pyc
+
+# 程序运行时生成的数据（不入库）
+logging/
+tests/logging/
+autosave_backup/
+
+# 本地开发笔记（含个人路径，不发布）
+项目工作记忆.md

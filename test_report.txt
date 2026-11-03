@@ -1,0 +1,118 @@
+﻿PSoC-Potentiostat-YI-1.0 检测报告
+生成时间: 2026-10-14 00:49:53
+
+==================================================
+一、环境诊断
+==================================================
+Python: 3.13.5  (C:\Users\YZJ\miniconda3\python.exe)
+
+[依赖导入]
+  OK   serial  3.5
+  OK   matplotlib  3.10.3
+  OK   tkinter  Tcl/Tk 8.6
+  OK   ttkbootstrap  2.2.2
+  OK   numpy  2.2.6
+  OK   scipy  1.16.1
+
+[核心文件语法]
+  OK   main.py
+  OK   config.py
+  OK   comm.py
+  OK   experiments.py
+  OK   plotting.py
+  OK   dialogs.py
+  OK   utils.py
+  OK   i18n.py
+  OK   algorithms.py
+
+[import main 自检（不打开窗口）]
+  OK   import main
+
+==================================================
+二、全量测试（共 80 个测试类）
+==================================================
+[ 1/80] OK   TestASVDeadlinePolling: OK
+[ 2/80] OK   TestASVDividerIsolation: OK
+[ 3/80] OK   TestASVEndToEnd: OK
+[ 4/80] OK   TestASVPulseAlignment: OK
+[ 5/80] OK   TestASVSettings: OK
+[ 6/80] OK   TestASVStripRange: OK
+[ 7/80] OK   TestASVTimingChain: OK
+[ 8/80] OK   TestAlgorithms: OK
+[ 9/80] OK   TestAmpAutosave: OK
+[10/80] OK   TestAmpChannelFilterAndNonblocking: OK
+[11/80] OK   TestAmpOpenData: OK
+[12/80] OK   TestAmpUSB: OK
+[13/80] OK   TestAnalysisGraphOps: OK
+[14/80] OK   TestAsvRealTimerWindow: OK
+[15/80] OK   TestAutosave: OK
+[16/80] OK   TestCVCycles: OK
+[17/80] OK   TestCVFrameModes: OK
+[18/80] OK   TestCVFrameUSB: OK
+[19/80] OK   TestCVMultiCycleLoop: OK
+[20/80] OK   TestCVSettingChanges: OK
+[21/80] OK   TestCalibration: OK
+[22/80] OK   TestCalibrationGuard: OK
+[23/80] OK   TestCalibrationImportRobustness: OK
+[24/80] OK   TestChronoDataTry: OK
+[25/80] OK   TestChronoEndToEnd: OK
+[26/80] OK   TestCsvEncodingCompat: OK
+[27/80] OK   TestCurrentRangeRefresh: OK
+[28/80] OK   TestCurrentSignConvention: OK
+[29/80] OK   TestCurveMath: unknown color name ""
+[30/80] OK   TestCycleSendRouting: OK
+[31/80] OK   TestCyclesCapacityGate: OK
+[32/80] OK   TestDPVStandaloneEndToEnd: OK
+[33/80] OK   TestDeadlinePolling: OK
+[34/80] OK   TestDeleteCleanup: OK
+[35/80] OK   TestDeleteCurrentPageData: OK
+[36/80] OK   TestDialogCenteredOnMaster: OK
+[37/80] OK   TestDpvAsvEndToEnd: OK
+[38/80] OK   TestDpvDialogValidation: OK
+[39/80] OK   TestDpvXLineAndValidation: OK
+[40/80] OK   TestExportPeaks: OK
+[41/80] OK   TestFakeDeviceIntegration: OK
+[42/80] OK   TestFullGuiRoundTrip: OK
+[43/80] OK   TestGetDataTermination: OK
+[44/80] OK   TestGuiSessionWalkthrough: OK
+[45/80] OK   TestHardwareTestRobustness: OK
+[46/80] OK   TestI18nCoverage: OK
+[47/80] OK   TestLanguageSwitchNoResidue: OK
+[48/80] OK   TestLegacyPyusbEraBugs: OK
+[49/80] OK   TestLegendLanguageRefresh: OK
+[50/80] OK   TestLegendNoTitle: OK
+[51/80] OK   TestMenuDataActions: OK
+[52/80] OK   TestMenuIndicators: OK
+[53/80] OK   TestMethodFile: OK
+[54/80] OK   TestMockDataSuite: OK
+[55/80] OK   TestOpenDataRouting: OK
+[56/80] OK   TestPartialDoneMessage: OK
+[57/80] OK   TestPeakAreaCharge: OK
+[58/80] OK   TestPortBusyResilience: OK
+[59/80] OK   TestRangeRefreshEndToEnd: OK
+[60/80] OK   TestRealSaveDialogPath: OK
+[61/80] OK   TestRollingMean: OK
+[62/80] OK   TestRunButtonWiring: OK
+[63/80] OK   TestSaturationDetection: OK
+[64/80] OK   TestSaveCurrentPageData: OK
+[65/80] OK   TestScanDelayMs: OK
+[66/80] OK   TestScanProgressDialog: OK
+[67/80] OK   TestSerialComm: OK
+[68/80] OK   TestSettingsAllFieldsRoundtrip: OK
+[69/80] OK   TestSettingsPersistence: OK
+[70/80] OK   TestShowLookupTable: OK
+[71/80] OK   TestSimulateHotSwapScanRouting: OK
+[72/80] OK   TestSimulateMode: OK
+[73/80] OK   TestStirringCommand: OK
+[74/80] OK   TestStirringLiveIndicator: OK
+[75/80] OK   TestStirringPinReset: OK
+[76/80] OK   TestSwvAsvEndToEnd: OK
+[77/80] OK   TestSwvDialogValidation: OK
+[78/80] OK   TestSwvStandaloneEndToEnd: OK
+[79/80] OK   TestTheme:     ("after" script)
+[80/80] OK   TestUnifiedScanWindow: OK
+
+==================================================
+三、结论
+==================================================
+通过：环境诊断与全部测试均正常

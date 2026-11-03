@@ -1,0 +1,15 @@
+clean_volt = 800.0
+clean_time = 2.0
+plate_volt = -1400.0
+plate_time = 300.0
+strip_start = -1400.0
+end_voltage = 500.0
+rest_time = 15.0
+stirring_enabled = True
+clean_enabled = True
+clean_after_strip = False
+sweep_rate = 0.5
+sweep_type = SWV
+pulse_height = 100.0
+pulse_inc = 5.0
+pulse_width = 100.0

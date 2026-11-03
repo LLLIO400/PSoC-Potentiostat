@@ -1,0 +1,19 @@
+﻿检查项,结果,详情
+CV1 LUT 长度,PASS,
+CV1 点数完整,PASS,2001 vs 2001
+CV1 数据完整且无全程削顶,PASS,范围 -1 ~ 1 uA
+CV2 LUT 长度,PASS,
+CV2 点数完整,PASS,4001 vs 4001
+超容量降级:单圈 LUT,PASS,got 2002
+6 圈拼合点数,PASS,12001 vs 12001
+LSV 数据完整,PASS,1001 点
+SWV 数据完整,PASS,"201 点, 峰 +0.51 @ -400 mV"
+DPV 数据完整,PASS,"201 点, 峰 +0.51 @ -400 mV"
+CA 头部平滑,PASS,0.219 uA
+ASV 溶出数据完整,PASS,381 点(381 步×2 采样/步)
+寻峰算法检出 Bi 主峰(-500~-100 mV),FAIL,未检出
+SG 平滑,PASS,等长且中部偏差<5uA
+基线扣除,PASS,尾部基线贴近 0
+detect_peaks 自动寻峰,PASS,1 个峰
+峰面积积分,PASS,15 uA·mV
+溶出曲线起点无杂峰,PASS,0.20 uA

@@ -1,0 +1,14 @@
+﻿检查项,结果,详情
+CV1 LUT 长度,PASS,
+CV1 点数完整,PASS,2001 vs 2001
+CV1 氧化峰向上,PASS,+22.8 uA @ 436 mV
+CV1 还原峰向下,PASS,-103.6 uA
+CV2 LUT 长度,PASS,
+CV2 点数完整,PASS,4001 vs 4001
+超容量降级:单圈 LUT,PASS,got 2002
+6 圈拼合点数,PASS,12001 vs 12001
+LSV 氧化波向上,FAIL,max -24.9 uA
+SWV 氧化峰向上,FAIL,-0.05 uA @ -400 mV
+DPV 氧化峰向上,FAIL,+0.00 uA @ -400 mV
+CA 头部平滑,PASS,0.148 uA
+ASV 链路完成且溶出区呈阳极特征,PASS,"均值 +0.24 uA, 峰 +0.34 uA @ 400 mV"
