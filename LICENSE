@@ -1,0 +1,21 @@
+License / 许可证
+================
+
+Upstream code (Copyright (c) 2015-2023 Kyle Vitautas Lopin, Naresuan University)
+and the modifications / new files in this fork (Copyright (c) 2026 Zhijian Yi)
+are licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported
+License.
+
+    http://creativecommons.org/licenses/by-sa/3.0/
+    https://creativecommons.org/licenses/by-sa/3.0/legalcode  (full text)
+
+You are free to share and adapt this work for any purpose, even commercially,
+under the following terms:
+
+  * Attribution — you must give appropriate credit: to Kyle Lopin for the
+    upstream PSoC-Potentiostat project, and to Zhijian Yi for this fork
+    (PSoC-Potentiostat-YI-1.0); and indicate if changes were made.
+  * ShareAlike — if you remix, transform, or build upon this work, you must
+    distribute your contributions under the same license (CC BY-SA 3.0+).
+
+Please keep the upstream copyright headers when redistributing.
