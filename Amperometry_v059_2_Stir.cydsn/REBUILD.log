@@ -1,0 +1,383 @@
+--------------- Rebuild Started: 08/25/2026 21:38:20 Project: Amperometry_v059_2_Stir, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\calibrate.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\DAC.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\helper_functions.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\lut_protocols.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\usb_protocols.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\user_selections.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\main.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cymetadata.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Counter_Electrode.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\AMux_V_source.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\DVDAC.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\DVDAC_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\AMux_TIA_input.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Pin_DVDAC_cap.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\AMux_TIA_resistor_bypass.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PWM_isr.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\PWM_isr_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TIA_resistor1.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ADC_SigDel.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_INT.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TIA_end_pin.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Working_Electrode.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\VDAC_TIA.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\VDAC_TIA_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\isr_dac.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TIA.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\TIA_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\isr_adc.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_audio.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_boot.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_cdc.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_cls.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_descr.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_drv.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_episr.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_hid.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_pm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_std.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_vnd.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_midi.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_msc.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\IDAC_calibrate.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\IDAC_calibrate_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\isr_adcAmp.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Reference_Electrode.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\EEPROM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Clock_PWM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\VDAC_source.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\VDAC_source_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\AMux_electrode.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Opamp_Aux.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Opamp_Aux_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\DVDAC_DMA_dma.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\DVDAC_VDAC8.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\DVDAC_VDAC8_PM.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\DVDAC_IntClock.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_Ext_CP_Clk.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_IRQ.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_theACLK.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_Dm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\USBUART_Dp.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Cm3Start.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyDmac.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyFlash.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CyLib.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyPm.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\CySpc.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cyutils.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Pin_Stir.o"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.hex"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.elf"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.map"
+Deleting file ".\Amperometry_v059_2_Stir.cycdx"
+Deleting file ".\Amperometry_v059_2_Stir.svd"
+Deleting file ".\Amperometry_v059_2_Stir.rpt"
+Deleting file ".\Amperometry_v059_2_Stir_timing.html"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
+Deleting file ".\CortexM3\ARM_GCC_541\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
+cydsfit.exe -.appdatapath "C:\Users\YZJ\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\YZJ\Desktop\PSoC-Potentiostat-master\Amperometry_v059_2_Stir.cydsn\Amperometry_v059_2_Stir.cyprj -d CY8C5888LTI-LP097 -s C:\Users\YZJ\Desktop\PSoC-Potentiostat-master\Amperometry_v059_2_Stir.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation...
+Synthesis...
+Tech Mapping...
+Info: plm.M0038: The pin named Working_Electrode(0) at location P0[0] prevents usage of special purposes: OpAmp:out. (App=cydsfit)
+Analog Placement...
+Log: apr.M0058: The analog placement iterative improvement is 23% done. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 53% done. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 85% done. (App=cydsfit)
+Analog Routing...
+Analog Code Generation...
+Warning: apr.M0042: Bonded pin(s) "P3[5]" are not used in your current design but have been connected in order to route the design. (App=cydsfit)
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/calibrate.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c calibrate.c -o .\CortexM3\ARM_GCC_541\Debug\calibrate.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/DAC.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c DAC.c -o .\CortexM3\ARM_GCC_541\Debug\DAC.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/helper_functions.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c helper_functions.c -o .\CortexM3\ARM_GCC_541\Debug\helper_functions.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/lut_protocols.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c lut_protocols.c -o .\CortexM3\ARM_GCC_541\Debug\lut_protocols.o
+In file included from lut_protocols.h:20:0,
+                 from lut_protocols.c:12:
+lut_protocols.c: In function 'LUT_MakeTriangle_Wave':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:71:5: note: in expansion of macro 'printf'
+     printf("p: %i\n", _lut_index);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:74:5: note: in expansion of macro 'printf'
+     printf("z: %i\n", _lut_index);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:77:5: note: in expansion of macro 'printf'
+     printf("v: %i\n", _lut_index);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:82:5: note: in expansion of macro 'printf'
+     printf("%i\n", _lut_index);
+     ^
+lut_protocols.c: In function 'LUT_MakeTriangle_Wave_SWV':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:94:5: note: in expansion of macro 'printf'
+     printf("p: %i\n", _lut_index);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:97:5: note: in expansion of macro 'printf'
+     printf("z: %i\n", _lut_index);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:100:5: note: in expansion of macro 'printf'
+     printf("v: %i\n", _lut_index);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:105:5: note: in expansion of macro 'printf'
+     printf("%i\n", _lut_index);
+     ^
+lut_protocols.c: In function 'LUT_MakeCVStartZero':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:135:5: note: in expansion of macro 'printf'
+     printf("dac ground value: %i\n", dac_ground_value);
+     ^
+lut_protocols.c: In function 'LUT_MakeCVStartZero_SWV':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:167:5: note: in expansion of macro 'printf'
+     printf("dac ground value: %i\n", dac_ground_value);
+     ^
+lut_protocols.c: In function 'LUT_make_line':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:204:5: note: in expansion of macro 'printf'
+     printf("start: %i, end: %i\n", start, end);
+     ^
+lut_protocols.c: In function 'LUT_make_swv_line':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:255:5: note: in expansion of macro 'printf'
+     printf("making swv linefrom: %i to %i \n", start, end);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:256:5: note: in expansion of macro 'printf'
+     printf("inc: %i height: %i \n", pulse_inc, pulse_height);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:267:13: note: in expansion of macro 'printf'
+             printf("a: %i, %i\n", index, value);
+             ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+lut_protocols.c:279:13: note: in expansion of macro 'printf'
+             printf("b: %i, %i\n", index, value);
+             ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/usb_protocols.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c usb_protocols.c -o .\CortexM3\ARM_GCC_541\Debug\usb_protocols.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/user_selections.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c user_selections.c -o .\CortexM3\ARM_GCC_541\Debug\user_selections.o
+user_selections.c: In function 'user_export_lut':
+user_selections.c:73:21: warning: passing argument 1 of 'USB_Export_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+     USB_Export_Data(&waveform_lut, length);
+                     ^
+In file included from user_selections.h:20:0,
+                 from user_selections.c:16:
+usb_protocols.h:45:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t (*)[5005] {aka short unsigned int (*)[5005]}'
+ void USB_Export_Data(uint8_t array[], uint16_t size);
+      ^
+user_selections.c: In function 'user_export_lut_length':
+user_selections.c:77:21: warning: passing argument 1 of 'USB_Export_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+     USB_Export_Data(&lut_length, 2);
+                     ^
+In file included from user_selections.h:20:0,
+                 from user_selections.c:16:
+usb_protocols.h:45:6: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint16_t * {aka short unsigned int *}'
+ void USB_Export_Data(uint8_t array[], uint16_t size);
+      ^
+In file included from user_selections.h:18:0,
+                 from user_selections.c:16:
+user_selections.c: In function 'user_lookup_table_maker':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:376:5: note: in expansion of macro 'printf'
+     printf("make look up table\n");
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:378:9: note: in expansion of macro 'printf'
+         printf("make look up table for swv\n");
+         ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:389:5: note: in expansion of macro 'printf'
+     printf("user lookup table: %i, %i\n", start_dac_value, end_dac_value);
+     ^
+user_selections.c: In function 'user_lookup_table_maker_swv':
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:421:5: note: in expansion of macro 'printf'
+     printf("start_voltage: %i\n", start_dac_value);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:422:5: note: in expansion of macro 'printf'
+     printf("end voltage: %i\n", end_dac_value);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:423:5: note: in expansion of macro 'printf'
+     printf("inc voltage: %i\n", swv_inc);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:424:5: note: in expansion of macro 'printf'
+     printf("%s", &data_buffer[12]);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:425:5: note: in expansion of macro 'printf'
+     printf("swv pulse voltage: %i\n", swv_pulse_height);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:426:5: note: in expansion of macro 'printf'
+     printf("start_voltage_tupe: %i\n", sweep_type);
+     ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:431:9: note: in expansion of macro 'printf'
+         printf("make CV look up table and start at 0V\n");
+         ^
+globals.h:168:30: warning: statement with no effect [-Wunused-value]
+     #define printf(fmt, ...) (0)
+                              ^
+user_selections.c:435:9: note: in expansion of macro 'printf'
+         printf("make CV look up table and start at start voltage\n");
+         ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:149:17: warning: implicit declaration of function 'user_export_lut' [-Wimplicit-function-declaration]
+                 user_export_lut(OUT_Data_Buffer);
+                 ^
+main.c:152:17: warning: implicit declaration of function 'user_export_lut_length' [-Wimplicit-function-declaration]
+                 user_export_lut_length();
+                 ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyfitter_cfg.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\cyfitter_cfg.c -o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cymetadata.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\cymetadata.c -o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Counter_Electrode.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Counter_Electrode.c -o .\CortexM3\ARM_GCC_541\Debug\Counter_Electrode.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/AMux_V_source.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\AMux_V_source.c -o .\CortexM3\ARM_GCC_541\Debug\AMux_V_source.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/DVDAC.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\DVDAC.c -o .\CortexM3\ARM_GCC_541\Debug\DVDAC.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/DVDAC_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\DVDAC_PM.c -o .\CortexM3\ARM_GCC_541\Debug\DVDAC_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/AMux_TIA_input.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\AMux_TIA_input.c -o .\CortexM3\ARM_GCC_541\Debug\AMux_TIA_input.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Pin_DVDAC_cap.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Pin_DVDAC_cap.c -o .\CortexM3\ARM_GCC_541\Debug\Pin_DVDAC_cap.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/AMux_TIA_resistor_bypass.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\AMux_TIA_resistor_bypass.c -o .\CortexM3\ARM_GCC_541\Debug\AMux_TIA_resistor_bypass.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PWM_isr.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\PWM_isr.c -o .\CortexM3\ARM_GCC_541\Debug\PWM_isr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/PWM_isr_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\PWM_isr_PM.c -o .\CortexM3\ARM_GCC_541\Debug\PWM_isr_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TIA_resistor1.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\TIA_resistor1.c -o .\CortexM3\ARM_GCC_541\Debug\TIA_resistor1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ADC_SigDel.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\ADC_SigDel.c -o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ADC_SigDel_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\ADC_SigDel_PM.c -o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ADC_SigDel_INT.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\ADC_SigDel_INT.c -o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TIA_end_pin.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\TIA_end_pin.c -o .\CortexM3\ARM_GCC_541\Debug\TIA_end_pin.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Working_Electrode.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Working_Electrode.c -o .\CortexM3\ARM_GCC_541\Debug\Working_Electrode.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/VDAC_TIA.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\VDAC_TIA.c -o .\CortexM3\ARM_GCC_541\Debug\VDAC_TIA.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/VDAC_TIA_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\VDAC_TIA_PM.c -o .\CortexM3\ARM_GCC_541\Debug\VDAC_TIA_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/isr_dac.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\isr_dac.c -o .\CortexM3\ARM_GCC_541\Debug\isr_dac.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TIA.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\TIA.c -o .\CortexM3\ARM_GCC_541\Debug\TIA.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TIA_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\TIA_PM.c -o .\CortexM3\ARM_GCC_541\Debug\TIA_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/isr_adc.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\isr_adc.c -o .\CortexM3\ARM_GCC_541\Debug\isr_adc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_audio.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_audio.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_audio.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_boot.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_boot.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_boot.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_cdc.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_cdc.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_cdc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_cls.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_cls.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_cls.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_descr.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_descr.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_descr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_drv.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_drv.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_drv.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_episr.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_episr.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_episr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_hid.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_hid.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_hid.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_pm.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_pm.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_pm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_std.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_std.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_std.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_vnd.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_vnd.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_vnd.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_midi.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_midi.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_midi.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_msc.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_msc.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_msc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/IDAC_calibrate.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\IDAC_calibrate.c -o .\CortexM3\ARM_GCC_541\Debug\IDAC_calibrate.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/IDAC_calibrate_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\IDAC_calibrate_PM.c -o .\CortexM3\ARM_GCC_541\Debug\IDAC_calibrate_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/isr_adcAmp.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\isr_adcAmp.c -o .\CortexM3\ARM_GCC_541\Debug\isr_adcAmp.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Reference_Electrode.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Reference_Electrode.c -o .\CortexM3\ARM_GCC_541\Debug\Reference_Electrode.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/EEPROM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\EEPROM.c -o .\CortexM3\ARM_GCC_541\Debug\EEPROM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Clock_PWM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Clock_PWM.c -o .\CortexM3\ARM_GCC_541\Debug\Clock_PWM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/VDAC_source.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\VDAC_source.c -o .\CortexM3\ARM_GCC_541\Debug\VDAC_source.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/VDAC_source_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\VDAC_source_PM.c -o .\CortexM3\ARM_GCC_541\Debug\VDAC_source_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/AMux_electrode.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\AMux_electrode.c -o .\CortexM3\ARM_GCC_541\Debug\AMux_electrode.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Opamp_Aux.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Opamp_Aux.c -o .\CortexM3\ARM_GCC_541\Debug\Opamp_Aux.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Opamp_Aux_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Opamp_Aux_PM.c -o .\CortexM3\ARM_GCC_541\Debug\Opamp_Aux_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/DVDAC_DMA_dma.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\DVDAC_DMA_dma.c -o .\CortexM3\ARM_GCC_541\Debug\DVDAC_DMA_dma.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/DVDAC_VDAC8.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\DVDAC_VDAC8.c -o .\CortexM3\ARM_GCC_541\Debug\DVDAC_VDAC8.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/DVDAC_VDAC8_PM.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\DVDAC_VDAC8_PM.c -o .\CortexM3\ARM_GCC_541\Debug\DVDAC_VDAC8_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/DVDAC_IntClock.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\DVDAC_IntClock.c -o .\CortexM3\ARM_GCC_541\Debug\DVDAC_IntClock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ADC_SigDel_Ext_CP_Clk.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\ADC_SigDel_Ext_CP_Clk.c -o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_Ext_CP_Clk.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ADC_SigDel_IRQ.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\ADC_SigDel_IRQ.c -o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_IRQ.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/ADC_SigDel_theACLK.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\ADC_SigDel_theACLK.c -o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_theACLK.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_Dm.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_Dm.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_Dm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/USBUART_Dp.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\USBUART_Dp.c -o .\CortexM3\ARM_GCC_541\Debug\USBUART_Dp.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Cm3Start.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Cm3Start.c -o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyDmac.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\CyDmac.c -o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyFlash.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\CyFlash.c -o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CyLib.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\CyLib.c -o .\CortexM3\ARM_GCC_541\Debug\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyPm.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\cyPm.c -o .\CortexM3\ARM_GCC_541\Debug\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/CySpc.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\CySpc.c -o .\CortexM3\ARM_GCC_541\Debug\CySpc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cyutils.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\cyutils.c -o .\CortexM3\ARM_GCC_541\Debug\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/cy_em_eeprom.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\cy_em_eeprom.c -o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/Pin_Stir.lst -g -D DEBUG -Wall -ffunction-sections -ffat-lto-objects -O0 -std=gnu99 -c Generated_Source\PSoC5\Pin_Stir.c -o .\CortexM3\ARM_GCC_541\Debug\Pin_Stir.o
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\CortexM3\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.a .\CortexM3\ARM_GCC_541\Debug\Counter_Electrode.o .\CortexM3\ARM_GCC_541\Debug\AMux_V_source.o .\CortexM3\ARM_GCC_541\Debug\DVDAC.o .\CortexM3\ARM_GCC_541\Debug\DVDAC_PM.o .\CortexM3\ARM_GCC_541\Debug\AMux_TIA_input.o .\CortexM3\ARM_GCC_541\Debug\Pin_DVDAC_cap.o .\CortexM3\ARM_GCC_541\Debug\AMux_TIA_resistor_bypass.o .\CortexM3\ARM_GCC_541\Debug\PWM_isr.o .\CortexM3\ARM_GCC_541\Debug\PWM_isr_PM.o .\CortexM3\ARM_GCC_541\Debug\TIA_resistor1.o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel.o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_PM.o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_INT.o .\CortexM3\ARM_GCC_541\Debug\TIA_end_pin.o .\CortexM3\ARM_GCC_541\Debug\Working_Electrode.o .\CortexM3\ARM_GCC_541\Debug\VDAC_TIA.o .\CortexM3\ARM_GCC_541\Debug\VDAC_TIA_PM.o .\CortexM3\ARM_GCC_541\Debug\isr_dac.o .\CortexM3\ARM_GCC_541\Debug\TIA.o .\CortexM3\ARM_GCC_541\Debug\TIA_PM.o .\CortexM3\ARM_GCC_541\Debug\isr_adc.o .\CortexM3\ARM_GCC_541\Debug\USBUART.o .\CortexM3\ARM_GCC_541\Debug\USBUART_audio.o .\CortexM3\ARM_GCC_541\Debug\USBUART_boot.o .\CortexM3\ARM_GCC_541\Debug\USBUART_cdc.o .\CortexM3\ARM_GCC_541\Debug\USBUART_cls.o .\CortexM3\ARM_GCC_541\Debug\USBUART_descr.o .\CortexM3\ARM_GCC_541\Debug\USBUART_drv.o .\CortexM3\ARM_GCC_541\Debug\USBUART_episr.o .\CortexM3\ARM_GCC_541\Debug\USBUART_hid.o .\CortexM3\ARM_GCC_541\Debug\USBUART_pm.o .\CortexM3\ARM_GCC_541\Debug\USBUART_std.o .\CortexM3\ARM_GCC_541\Debug\USBUART_vnd.o .\CortexM3\ARM_GCC_541\Debug\USBUART_midi.o .\CortexM3\ARM_GCC_541\Debug\USBUART_msc.o .\CortexM3\ARM_GCC_541\Debug\IDAC_calibrate.o .\CortexM3\ARM_GCC_541\Debug\IDAC_calibrate_PM.o .\CortexM3\ARM_GCC_541\Debug\isr_adcAmp.o .\CortexM3\ARM_GCC_541\Debug\Reference_Electrode.o .\CortexM3\ARM_GCC_541\Debug\EEPROM.o .\CortexM3\ARM_GCC_541\Debug\Clock_PWM.o .\CortexM3\ARM_GCC_541\Debug\VDAC_source.o .\CortexM3\ARM_GCC_541\Debug\VDAC_source_PM.o .\CortexM3\ARM_GCC_541\Debug\AMux_electrode.o .\CortexM3\ARM_GCC_541\Debug\Opamp_Aux.o .\CortexM3\ARM_GCC_541\Debug\Opamp_Aux_PM.o .\CortexM3\ARM_GCC_541\Debug\DVDAC_DMA_dma.o .\CortexM3\ARM_GCC_541\Debug\DVDAC_VDAC8.o .\CortexM3\ARM_GCC_541\Debug\DVDAC_VDAC8_PM.o .\CortexM3\ARM_GCC_541\Debug\DVDAC_IntClock.o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_Ext_CP_Clk.o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_IRQ.o .\CortexM3\ARM_GCC_541\Debug\ADC_SigDel_theACLK.o .\CortexM3\ARM_GCC_541\Debug\USBUART_Dm.o .\CortexM3\ARM_GCC_541\Debug\USBUART_Dp.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\Pin_Stir.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\YZJ\Desktop\PSoC-Potentiostat-master\Amperometry_v059_2_Stir.cydsn\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.elf .\CortexM3\ARM_GCC_541\Debug\calibrate.o .\CortexM3\ARM_GCC_541\Debug\DAC.o .\CortexM3\ARM_GCC_541\Debug\helper_functions.o .\CortexM3\ARM_GCC_541\Debug\lut_protocols.o .\CortexM3\ARM_GCC_541\Debug\usb_protocols.o .\CortexM3\ARM_GCC_541\Debug\user_selections.o .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Amperometry_v059_2_Stir.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -O0 -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\Users\YZJ\Desktop\PSoC-Potentiostat-master\Amperometry_v059_2_Stir.cydsn\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S C:\Users\YZJ\Desktop\PSoC-Potentiostat-master\Amperometry_v059_2_Stir.cydsn\CortexM3\ARM_GCC_541\Debug\Amperometry_v059_2_Stir.elf
+Flash used: 39164 of 262144 bytes (14.9%).
+SRAM used: 54109 of 65536 bytes (82.6%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Rebuild Succeeded: 08/25/2026 21:39:10 ---------------
