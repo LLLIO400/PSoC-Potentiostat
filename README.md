@@ -16,6 +16,8 @@
 
 **配套固件 Firmware**：完整 PSoC Creator 工程与刷机图文说明见 [`YI-1.0-firmware` 分支](https://github.com/LLLIO400/PSoC-Potentiostat/tree/YI-1.0-firmware)。
 
+**配套硬件 Hardware**：3D 打印外壳 STEP 模型（PETG）与 SPE 电极 PCB 转接板打板文件见 [`硬件/`](硬件/) 目录。
+
 **完整说明文档 Full documentation**：[`PSoC-Potentiostat-YI-1.0_upgrade_guide.md`](PSoC-Potentiostat-YI-1.0_upgrade_guide.md) —— 硬件方案、固件命令与刷机、界面与数据分析、接线总表、推荐验证试剂、已知局限（中文）。
 
 ---
