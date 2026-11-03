@@ -14,6 +14,8 @@
 
 **下载 Download**：运行包 / 测试包见 [Releases v1.0](https://github.com/LLLIO400/PSoC-Potentiostat/releases/tag/v1.0)。
 
+**配套固件 Firmware**：完整 PSoC Creator 工程与刷机图文说明见 [`YI-1.0-firmware` 分支](https://github.com/LLLIO400/PSoC-Potentiostat/tree/YI-1.0-firmware)。
+
 **完整说明文档 Full documentation**：[`PSoC-Potentiostat-YI-1.0_upgrade_guide.md`](PSoC-Potentiostat-YI-1.0_upgrade_guide.md) —— 硬件方案、固件命令与刷机、界面与数据分析、接线总表、推荐验证试剂、已知局限（中文）。
 
 ---
