@@ -6,6 +6,11 @@
 一个基于 CY8CKIT-059（PSoC 5LP）的开源恒电位仪分支：Python 3 中文化 GUI、真 DPV 固件补丁、CV 多圈、搅拌控制、真机实测套件。
 
 ![整机外观](实验记录/实拍素材_20261103/整机外观_3D打印外壳与电极支架.jpg)
+*整机外观（最终版：电极支架改用手拧螺丝）*
+
+▶️ **实机演示**（4.5 s 装配早期版本，结构与最终版一致，演示更直观；带声音原片见 [Release v1.0](https://github.com/LLLIO400/PSoC-Potentiostat/releases/tag/v1.0) 附件）：
+
+![实机演示](实验记录/实拍素材_20261103/实机演示_20261103.gif)
 
 **下载 Download**：运行包 / 测试包见 [Releases v1.0](https://github.com/LLLIO400/PSoC-Potentiostat/releases/tag/v1.0)。
 
